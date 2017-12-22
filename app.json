@@ -1,0 +1,15 @@
+{
+  "name": "chat-websockets-notifications",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
