@@ -35,8 +35,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-        name: start
-        command: npm start
+          name: start
+          command: npm start
 
       - save_cache:
           paths:
