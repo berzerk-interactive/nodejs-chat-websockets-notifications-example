@@ -34,10 +34,12 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      # - run:
+      #     name: start
+      #     command: npm start
       - run:
-          name: start
-          command: npm start
-
+          name: test
+          command: npm test
       - save_cache:
           paths:
             - node_modules
