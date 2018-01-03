@@ -18,3 +18,20 @@ describe('Test the undefined path -404', () => {
         });
     });
 });
+
+describe('Test multiply path', () => {
+    test('It should response 4', (done) => {
+        request(app).get('/multiply/2').then((response) => {
+            expect(response.statusCode).toBe(200);
+            expect(response.text).toBe('4');
+            done();
+        });
+    });
+    test('It should response 8', (done) => {
+        request(app).get('/multiply/4').then((response) => {
+            expect(response.statusCode).toBe(200);
+            expect(response.text).toBe('8');
+            done();
+        });
+    });
+});
