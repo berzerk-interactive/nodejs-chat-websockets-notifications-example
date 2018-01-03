@@ -24,6 +24,7 @@
   "homepage": "https://github.com/berzerk-interactive/nodejs-chat-websockets-notifications-example#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "jest": "^22.0.4",
     "socket.io": "^2.0.4"
   }
 }
