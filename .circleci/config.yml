@@ -40,10 +40,3 @@ jobs:
       - run:
           name: test
           command: npm test
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: npm test
