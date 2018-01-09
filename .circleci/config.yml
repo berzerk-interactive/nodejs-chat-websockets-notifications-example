@@ -54,5 +54,5 @@ jobs:
           name: e2e
           command: |
             sudo npm i -g protractor
-            webdriver-manager update
+            sudo webdriver-manager update
             protractor
