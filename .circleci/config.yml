@@ -38,13 +38,13 @@ jobs:
       #     name: start
       #     command: npm start
       test:
-      # pre:
-      #   - npm start:
-      #       background: true
-      #   - sleep 5
-      # override:
-      #   - npm run test-single-run
-      #   - npm run protractor
-      - run:
-          name: test
-          command: npm test
+      pre:
+        - npm start:
+            background: true
+        - sleep 5
+      override:
+        - npm test
+        - npm run protractor
+      # - run:
+      #     name: test
+      #     command: npm test
