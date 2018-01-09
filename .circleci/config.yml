@@ -37,6 +37,7 @@ jobs:
       - run:
           name: start
           command: npm start
+          background: true
       # - test:
       #     pre:
       #       - npm start:
