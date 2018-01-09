@@ -34,17 +34,20 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
-      # - run:
-      #     name: start
-      #     command: npm start
-      - test:
-          pre:
-            - npm start:
-                background: true
-            - sleep 5
-          override:
-            - npm test
-            - npm run protractor
-      # - run:
-      #     name: test
-      #     command: npm test
+      - run:
+          name: start
+          command: npm start
+      # - test:
+      #     pre:
+      #       - npm start:
+      #           background: true
+      #       - sleep 5
+      #     override:
+      #       - npm test
+      #       - npm run protractor
+      - run:
+          name: test
+          command: npm test
+      - run:
+          name: e2e
+          command: protractor
