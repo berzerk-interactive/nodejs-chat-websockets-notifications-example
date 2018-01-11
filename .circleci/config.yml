@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:9.2.0
+      - image: circleci/node:9.2.0-browsers
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -37,11 +37,22 @@ jobs:
       - run:
           name: start
           command: npm start
+          background: true
+      # - test:
+      #     pre:
+      #       - npm start:
+      #           background: true
+      #       - sleep 5
+      #     override:
+      #       - npm test
+      #       - npm run protractor
+      - run:
+          name: test
+          command: npm test
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: npm test
+      - run:
+          name: e2e
+          command: |
+            sudo npm i -g protractor
+            sudo webdriver-manager update
+            protractor
