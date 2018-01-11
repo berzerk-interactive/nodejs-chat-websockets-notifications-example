@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "start": "node index.js",
+    "e2e": "protractor"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,9 @@
   "homepage": "https://github.com/berzerk-interactive/nodejs-chat-websockets-notifications-example#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "socket.io": "^2.0.4"
+    "jest": "^22.0.4",
+    "protractor": "^5.2.2",
+    "socket.io": "^2.0.4",
+    "supertest": "^3.0.0"
   }
 }
