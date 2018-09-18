@@ -12,8 +12,8 @@ io.on('connection', function(socket){
     console.log('user disconnected');
   });
 });
-
-http.listen(process.env.PORT || 3000, function(){
-  console.log('listening on *:3000');
+const port = process.env.PORT || 3000
+http.listen(port, function(){
+  console.log(`listening on ${port}`);
   console.log('some other PR 2');
 });
